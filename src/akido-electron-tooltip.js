@@ -30,7 +30,7 @@ module.exports = ((params = {}) => {
     });
 
     tooltipWin.loadURL(url.format({
-        pathname: path.join(__dirname, 'electron-tooltip.html'),
+        pathname: path.join(__dirname, 'akido-electron-tooltip.html'),
         protocol: 'file:',
         slashes: true
     }))
