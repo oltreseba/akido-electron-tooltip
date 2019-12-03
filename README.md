@@ -1,4 +1,9 @@
-# Electron tooltip
+# Akido Electron tooltip
+
+## Introduction
+This module is a fork of [Electron tooltip](https://www.npmjs.com/package/electron-tooltip), with improved support for the lastest version of electron (>5).
+
+The documentation is the same. The name has changed.
 
 ## Description
 
@@ -9,7 +14,7 @@ This module is intended to be used in [Electron applications](https://electron.a
 ## Installation
 
 ```javascript
-npm install --save-dev electron-tooltip
+npm i akido-electron-tooltip
 ```
 
 ## Usage
@@ -17,7 +22,7 @@ After importing the module, it will search for elements that have the data-toolt
 
 ```javascript
 // in the render process..
-const tt = require('electron-tooltip')
+const tt = require('akido-electron-tooltip')
 tt({
   // config properties
 })
@@ -42,7 +47,7 @@ Position, width and offset options can be overriden on a per element basis by us
 ```javascript
 // example
 // in the render process..
-const tt = require('electron-tooltip')
+const tt = require('akido-electron-tooltip')
 tt({
   position: 'bottom',
   width: 200,
