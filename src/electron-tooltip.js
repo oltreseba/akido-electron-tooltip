@@ -23,8 +23,11 @@ module.exports = ((params = {}) => {
         frame: false,
         show: false,
         hasShadow: false,
-        transparent: true
-    })
+        transparent: true,
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
 
     tooltipWin.loadURL(url.format({
         pathname: path.join(__dirname, 'electron-tooltip.html'),

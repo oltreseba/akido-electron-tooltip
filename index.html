@@ -1,7 +1,9 @@
 <html>
-    <head>
-
-        <style>
+<head>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
         a {
             display: inline-block;
             text-decoration: none;
@@ -11,22 +13,63 @@
 
             text-decoration: underline;
         }
-        </style>
-    </head>
-    <body>
-        <div>
-            <span style="text-align: right" data-tooltip="Nothing to declareé, well maybe a little. Will this still fit? 😂"  data-tooltip-width="200" data-tooltip-position="bottom" data-tooltip-offset="0">hallo tooltip</span>
-        </div>
-        <div>
-            <a href="#" data-tooltip="Go to www.google.nl " data-tooltip-position="left" data-tooltip-offset="0">test</a>
-        </div>
-        <div>
-            <span style="text-align: right; float: right" data-tooltip="Something to declare 😂 my friend?" data-tooltip-offset="5">hallo tooltip</span>
-        </div>
 
-        <script>
-            const tooltip = require('./src/electron-tooltip')
-            tooltip()
-        </script>
-    </body>
+        .hoverable {
+            position: absolute;
+            background: blue;
+            color: #fff;
+            border-radius: 5px;
+            padding:0.5em 3em;
+        }
+
+        #top {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+        }
+
+        #right {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+        }
+
+        #bottom {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+
+        #left {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="top" class="hoverable" data-tooltip="Top" data-tooltip-width="200" data-tooltip-position="top" data-tooltip-offset="0">Top</div>
+<div id="right" class="hoverable" data-tooltip="Right" data-tooltip-width="200" data-tooltip-position="right" data-tooltip-offset="0">Right</div>
+<div id="bottom" class="hoverable" data-tooltip="Bottom" data-tooltip-width="200" data-tooltip-position="bottom" data-tooltip-offset="0">Bottom</div>
+<div id="left" class="hoverable" data-tooltip="Left" data-tooltip-width="200" data-tooltip-position="left" data-tooltip-offset="0">Left</div>
+
+
+<div>
+    <span style="text-align: right" data-tooltip="Nothing to declareé, well maybe a little. Will this still fit? 😂"
+          data-tooltip-width="200" data-tooltip-position="bottom" data-tooltip-offset="0">hallo tooltip</span>
+</div>
+<div>
+    <a href="#" data-tooltip="Go to www.google.nl " data-tooltip-position="left" data-tooltip-offset="0">test</a>
+</div>
+<div>
+    <span style="text-align: right; float: right" data-tooltip="Something to declare 😂 my friend?"
+          data-tooltip-offset="5">hallo tooltip</span>
+</div>
+
+<script>
+    const tooltip = require('./src/electron-tooltip')
+    tooltip()
+</script>
+</body>
 </html>
