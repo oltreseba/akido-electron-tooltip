@@ -69,7 +69,12 @@ module.exports = ((params = {}) => {
             })
 
             tooltip.addEventListener('mouseleave', e => {
-                tooltipWin.webContents.send('reset-content')
+                try {
+                    tooltipWin.webContents.send('reset-content')
+                }catch (e) {
+                    console.log('Impossible to reset content on mouse leave');
+                    console.log(e);
+                }
             })
         })
     })
