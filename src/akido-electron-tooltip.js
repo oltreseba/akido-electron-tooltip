@@ -5,7 +5,8 @@ module.exports = ((params = {}) => {
         offset: '0',
         position: 'top',
         width: 'auto',
-        style: {}
+        style: {},
+        relativeLevel: 1
     }, params)
 
     const electron = require('electron')
@@ -60,12 +61,15 @@ module.exports = ((params = {}) => {
                 if (typeof config.customContent === "function")
 									content = config.customContent(e.target, content)
 
+                console.log(win);
+
                 tooltipWin.webContents.send('set-content', {
                     config: localConfig,
                     content: content,
                     elmDimensions: dimensions,
                     originalWinBounds: win.getContentBounds()
                 })
+                tooltipWin.setAlwaysOnTop(true, 'floating', e.target.getAttribute('data-tooltip-relativeLevel') || config.relativeLevel);
             })
 
             tooltip.addEventListener('mouseleave', e => {

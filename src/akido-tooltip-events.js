@@ -90,6 +90,7 @@ ipcRenderer.on('set-content', (e, details) => {
     const getPosition = positions[config.position]()
     tooltipWindow.setPosition(...getPosition)
 
+
     // Show it as inactive
     process.nextTick(() => {
         tooltipWindow.showInactive()
