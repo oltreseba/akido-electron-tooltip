@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/oltreseba/akido-electron-tooltip"
   },
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "./src/akido-electron-tooltip.js",
   "scripts": {
     "start": "electron main.js",
