@@ -61,7 +61,6 @@ module.exports = ((params = {}) => {
                 if (typeof config.customContent === "function")
 									content = config.customContent(e.target, content)
 
-                console.log(win);
 
                 tooltipWin.webContents.send('set-content', {
                     config: localConfig,
