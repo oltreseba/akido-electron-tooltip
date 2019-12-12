@@ -57,5 +57,6 @@ tt({
     backgroundColor: '#f2f3f4',
     borderRadius: '4px'
   },
+  level: 'pop-up-menu',
   relativeLevel: 2 
 })
