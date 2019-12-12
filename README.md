@@ -43,6 +43,7 @@ Position, width and offset options can be overriden on a per element basis by us
 |offset|Offset from the element to the tooltip|0|> 0|
 |style|Object for overwriting default styles|{}||
 |customContent|Function that will be called each time the tooltip is shown. Takes two arguments: the element on which it was called, and the current value of `data-tooltip`. It should return a string which will be used instead of the `data-tooltip` value|undefined||
+|level|It's possible to specify the level of the tooltip (check: https://electronjs.org/docs/api/browser-window#winsetalwaysontopflag-level-relativelevel)|'floating'| 'normal' \| 'floating' \| 'torn-off-menu' \| 'modal-panel' \| 'main-menu' \| 'status' \| 'pop-up-menu' \| 'screen-saver'||
 |relativeLevel|It's possible to specify the relative level of the tooltip (check: https://electronjs.org/docs/api/browser-window#winsetalwaysontopflag-level-relativelevel)|0|integer|
 
 ```javascript
